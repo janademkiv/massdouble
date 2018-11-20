@@ -21,9 +21,6 @@ namespace massdouble
             //    a++;
           
             //}Console.WriteLine(a);
-           
-            
-            //Console.WriteLine("Введите строку массива от 0 до 2");
 
             //вывод массива
             Console.WriteLine("Элементы мас");
@@ -35,14 +32,6 @@ namespace massdouble
 
             Console.WriteLine("Коллиество элементов");
             sumQuantity(arr);
-            //Console.WriteLine("Эллементы массива");
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    for (int j = 0; j < 6; j++)
-            //    {
-            //        Console.WriteLine(arr[i, j]);
-            //    }
-            //}
 
             Console.ReadKey();
         }
@@ -67,7 +56,6 @@ namespace massdouble
                 for (int j = 0; j < 6; j++)
                 {
                     Console.Write("{0,5}", arr[i, j]);
-                    //Console.Write(arr[i, j]);
                 }
                 Console.WriteLine();
             }
@@ -76,17 +64,12 @@ namespace massdouble
         static int sumString(int[,] arr, int inX)
         {
             int sum = 0;
-            //for (int i = 0; i < 5; i++)
-            //{
             for (int j = 0; j < 6; j++)
             {
                 sum += arr[inX, j];
             }
-
-            //}
             Console.WriteLine(sum);
-            //int sum;
-            //foreach (int f in sumString) { }
+           
             return sum;
         }
 
@@ -104,15 +87,11 @@ namespace massdouble
                     if (j < 0)
                     {
                         a++;
-                        
-                        //return a;
-                    }/*Console.WriteLine("Отрицательных " + a);*/
+                    }
                     if (j == 0)
                     {
                         b++;
-                        
-                        //return a;
-                    }/*Console.WriteLine("Нулевых " + b);*/
+                    }
                     if (j > 0)
                     {
                         c++;
@@ -127,41 +106,6 @@ namespace massdouble
             Console.WriteLine("Положительных " + c);
             return a;
         }
-
-
-        //static void poisk(int[,] a)
-        //{
-        //    byte p = 0;
-        //    byte n = 0;
-        //    byte o = 0;
-        //    for (int i = 0; i < 5; i++)
-        //    {
-        //        for (int j = 0; j < 6; j++)
-        //        {
-        //            if (a[i, j] > 0)
-        //            {
-        //                p++;
-        //            }
-        //            else if (a[i, j] < 0)
-        //            {
-        //                o++;
-        //            }else
-        //            {
-        //                n++;
-        //            }
-
-        //        }
-        //         Console.WriteLine();
-        //                Console.WriteLine(" В массиве");
-        //                Console.WriteLine();
-        //                Console.WriteLine("Всего {0} чисел равных 0", n);
-        //                Console.WriteLine("Всего {0} положительных чисел", p);
-        //                Console.WriteLine("Всего {0} отрицательных чисел", o);       
-        //    }
-
-        //}
-
-
     }
 
 }
