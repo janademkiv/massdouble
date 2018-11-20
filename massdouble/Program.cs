@@ -12,28 +12,29 @@ namespace massdouble
         static void Main(string[] args)
         {
 
-            //Random random = new Random();
+            
             int[,] arr = new int[5, 6];
-            int a = 0;
-            for (int i = 0; i < arr.Length; i++) {
-                a++;
-                
-            }Console.WriteLine(a);
-
-            poisk(arr);
-            //sumQuantity(arr);
-            //inPrint(arr);
+            //заполнение массива
+            inPrint(arr);
+            //int a = 0;
+            //for (int i = 0; i < arr.Length; i++) {
+            //    a++;
+          
+            //}Console.WriteLine(a);
+           
+            
             //Console.WriteLine("Введите строку массива от 0 до 2");
-            //int inX = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Сумма эллементов строки массива");
-            //sumString(arr, inX);
-            ////sumString(arr);
-            ////sumk(arr);
-            //Console.WriteLine("Элементы мас");
-            //outPrint(arr);
 
+            //вывод массива
+            Console.WriteLine("Элементы мас");
+            outPrint(arr);
 
+            Console.WriteLine("Сумма эллементов строки массива. Введите от 0 до 4");
+            int inX = int.Parse(Console.ReadLine());
+            sumString(arr, inX);
 
+            Console.WriteLine("Коллиество элементов");
+            sumQuantity(arr);
             //Console.WriteLine("Эллементы массива");
             //for (int i = 0; i < 5; i++)
             //{
@@ -89,37 +90,41 @@ namespace massdouble
             return sum;
         }
 
-
-
-
+       
         //14 возвращает кол-во нулевых, положит или отриц чисел в массиве
         static int sumQuantity(int[,] arr)
         {
             int a = 0;
+            int b = 0;
+            int c = 0;
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 6; j++)
-            {
-                if (j < 0)
                 {
-                    a++;
-                    Console.WriteLine("Отрицательных " + a);
-                    //return a;
-                }
-                if (j == 0)
-                {
-                    a++;
-                    Console.WriteLine("Нулевых " + a);
-                    //return a;
-                }
-                if (j > 0)
-                {
-                    a++;
-                    Console.WriteLine("Положительных " + a);
-                    //return a;
-                }
+                    if (j < 0)
+                    {
+                        a++;
+                        
+                        //return a;
+                    }/*Console.WriteLine("Отрицательных " + a);*/
+                    if (j == 0)
+                    {
+                        b++;
+                        
+                        //return a;
+                    }/*Console.WriteLine("Нулевых " + b);*/
+                    if (j > 0)
+                    {
+                        c++;
+                       
+                    }
+
+                  
+                }  
             }
-            }
+            Console.WriteLine("Отрицательных " + a);
+            Console.WriteLine("Нулевых " + b);
+            Console.WriteLine("Положительных " + c);
             return a;
         }
 
@@ -133,19 +138,27 @@ namespace massdouble
         //    {
         //        for (int j = 0; j < 6; j++)
         //        {
-        //            if (a[i, j] > 0) p++;
-        //            else {
-        //                if (a[i, j] < 0) o++; else n++;
+        //            if (a[i, j] > 0)
+        //            {
+        //                p++;
         //            }
-        //        }
+        //            else if (a[i, j] < 0)
+        //            {
+        //                o++;
+        //            }else
+        //            {
+        //                n++;
+        //            }
 
+        //        }
+        //         Console.WriteLine();
+        //                Console.WriteLine(" В массиве");
+        //                Console.WriteLine();
+        //                Console.WriteLine("Всего {0} чисел равных 0", n);
+        //                Console.WriteLine("Всего {0} положительных чисел", p);
+        //                Console.WriteLine("Всего {0} отрицательных чисел", o);       
         //    }
-        //    Console.WriteLine();
-        //    Console.WriteLine(" В массиве");
-        //    Console.WriteLine();
-        //    Console.WriteLine("Всего {0} чисел равных 0", n);
-        //    Console.WriteLine("Всего {0} положительных чисел", p);
-        //    Console.WriteLine("Всего {0} отрицательных чисел", o);
+
         //}
 
 
